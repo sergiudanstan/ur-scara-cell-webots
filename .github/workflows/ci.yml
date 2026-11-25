@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Least privilege by default; no job here needs to write anything.
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - name: Install ruff (hash-pinned)
+        run: python -m pip install --require-hashes -r .github/requirements-ci.lock
+      - name: Ruff, syntax errors and undefined names only
+        # ruff's wider default rule set reports 80+ style findings (percent formatting,
+        # unused noqa) on the existing code, so the check is scoped to rules that find
+        # real bugs: syntax errors (E9), invalid comparisons and string formats (F63, F7)
+        # and undefined names (F82).
+        run: ruff check --isolated --select E9,F63,F7,F82 .
+
+  test:
+    name: offline tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - name: Install pytest (hash-pinned)
+        run: python -m pip install --require-hashes -r .github/requirements-ci.lock
+      - name: Kinematics tests (IK/FK round trips, reachability, full UR swap program)
+        run: python -m pytest -q tests
+      - name: Every Python file compiles
+        # The controllers import Webots' "controller" module, which exists only inside
+        # Webots, so they cannot be imported here; this catches syntax errors in them.
+        run: python -m compileall -q controllers lib tools tests
+      - name: The committed world matches what the generator produces from lib/layout.py
+        run: |
+          python tools/gen_world.py
+          git diff --exit-code -- worlds/ur_scara_cell.wbt
+
+  audit:
+    name: security audit
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - name: Install audit tooling (hash-pinned)
+        run: python -m pip install --require-hashes -r .github/requirements-ci.lock
+      - name: Known vulnerabilities in the CI toolchain
+        run: pip-audit --strict --no-deps -r .github/requirements-ci.lock --progress-spinner off
+      - name: Audit the workflows themselves
+        run: zizmor --format plain .github/workflows/
