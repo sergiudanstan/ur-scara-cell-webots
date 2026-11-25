@@ -1,5 +1,12 @@
 # UR5e + Epson SCARA kitting cell (Webots R2025a)
 
+[![CI](https://github.com/sergiudanstan/ur-scara-cell-webots/actions/workflows/ci.yml/badge.svg)](https://github.com/sergiudanstan/ur-scara-cell-webots/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/sergiudanstan/ur-scara-cell-webots/actions/workflows/codeql.yml/badge.svg)](https://github.com/sergiudanstan/ur-scara-cell-webots/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sergiudanstan/ur-scara-cell-webots/badge)](https://scorecard.dev/viewer/?uri=github.com/sergiudanstan/ur-scara-cell-webots)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+**Live:** https://sergiudanstan.github.io/ur-scara-cell-webots/
+
 This is a robot cell where two robots work together.
 - An infeed conveyor brings round parts to a stop.
 - An **Epson SCARA T6-602S** places six parts in each tray.
@@ -7,7 +14,7 @@ This is a robot cell where two robots work together.
 - When the cart holds 2 × 2 × 2 trays, it leaves through an opening guarded by an area scanner and comes back empty.
 
 **▶ [Interactive 3D animation in the browser](https://sergiudanstan.github.io/ur-scara-cell-webots/)** shows one full cycle, including the cart trip. It runs on GitHub Pages, so you don't need Webots.
-**▶ [Cycle video (MP4, 60 s)](https://github.com/sergiudanstan/ur-scara-cell-webots/releases/latest)** is attached to the latest release.
+**▶ [Cycle video (MP4, 60 s)](https://github.com/sergiudanstan/ur-scara-cell-webots/releases/tag/v1.0)** is attached to the v1.0 release.
 
 ![One cycle: the SCARA fills a tray, the UR5e swaps it, the cart is loaded](docs/cycle.gif)
 
@@ -107,6 +114,10 @@ The smoke test runs a full cycle and checks the following:
 - Neither robot reports an error.
 - For each robot, its own FK (mapped to the world frame) is within 2 mm of the TCP position measured by the simulator. The measured errors are 0.23 mm for the SCARA and 0.34 mm for the UR5e.
 - The e-stop holds the robots, a reset is refused while the e-stop is pressed, and the scanner both stops the robots and restarts them automatically.
+
+## Development
+
+`python3 -m pytest -q tests` runs the offline kinematics tests without Webots. CI runs them together with a compile check of every Python file and a check that `worlds/ur_scara_cell.wbt` equals the output of `tools/gen_world.py`. The headless Webots smoke test (`tests/run_smoke.sh`) needs a Webots installation and is not run in CI. See [CONTRIBUTING.md](CONTRIBUTING.md) for branches and releases, [SECURITY.md](SECURITY.md) for reporting vulnerabilities, and [CHANGELOG.md](CHANGELOG.md) for history.
 
 ## Credits
 
