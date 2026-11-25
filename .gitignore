@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+tests/.smoke.log
+worlds/.*.wbt
+site/.build.log
+*.mp4

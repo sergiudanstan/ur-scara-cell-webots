@@ -1,0 +1,329 @@
+#VRML_SIM R2025a utf8
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/universal_robots/protos/UR5e.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "../protos/ScaraT6Cell.proto"
+WorldInfo {
+  info [ "UR5e + Epson SCARA T6 kitting cell" ]
+  title "UR5e + Epson SCARA kitting cell"
+  basicTimeStep 16
+  contactProperties [ ContactProperties { softCFM 0.001 } ]
+}
+DEF VIEW Viewpoint {
+  orientation -0.2216 -0.1435 0.9645 4.8888
+  position 0.55 4.3 2.65
+  exposure 1.2
+  follow "none"
+}
+TexturedBackground { texture "factory" luminosity 0.9 }
+TexturedBackgroundLight { texture "factory" luminosity 1.1 }
+Solid { name "floor" children [ Group { children [
+  Pose { translation 0.3 0 -0.01 children [ Shape { appearance PBRAppearance { baseColor 0.46 0.47 0.48 roughness 0.9 metalness 0 } geometry Box { size 14 12 0.02 } } ] }
+  Pose { translation -1.0462 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.83846 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.63077 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.42308 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.21538 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.0076923 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.2 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.40769 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.61538 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.82308 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 1.0308 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 1.2385 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 1.4462 -0.65 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -1.0462 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.83846 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.63077 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.42308 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.21538 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -0.0076923 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.2 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.40769 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.61538 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 0.82308 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 1.0308 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 1.2385 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation 1.4462 1.2 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.20769 0.08 0.002 } } ] }
+  Pose { translation -1.15 -0.54722 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 -0.34167 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 -0.13611 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 0.069444 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 0.275 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 0.48056 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 0.68611 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 0.89167 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation -1.15 1.0972 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 -0.54722 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 -0.34167 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 -0.13611 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 0.069444 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 0.275 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 0.48056 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 0.68611 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 0.89167 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 1.55 1.0972 0.001 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.08 0.20556 0.002 } } ] }
+  Pose { translation 0.85 -1.75 0.0012 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.3 0.75 roughness 0.8 metalness 0 } geometry Box { size 0.9 2.2 0.002 } } ] }
+  Pose { translation 2.6 0 0.0012 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.55 0.25 roughness 0.8 metalness 0 } geometry Box { size 0.6 6 0.002 } } ] }
+  Shape { appearance PBRAppearance { baseColor 1 0.8 0 roughness 0.9 metalness 0 transparency 0.6 } geometry IndexedFaceSet { coord Coordinate { point [ 1.3 -0.55 0.003, -0.3 -0.55 0.003, -0.2951 -0.6755 0.003, -0.2803 -0.8003 0.003, -0.2558 -0.9235 0.003, -0.2217 -1.044 0.003, -0.1782 -1.162 0.003, -0.1256 -1.276 0.003, -0.06422 -1.386 0.003, 0.005573 -1.49 0.003, 0.08335 -1.589 0.003, 0.1686 -1.681 0.003, 0.2609 -1.767 0.003, 0.3595 -1.844 0.003, 0.464 -1.914 0.003, 0.5736 -1.976 0.003, 0.6877 -2.028 0.003, 0.8056 -2.072 0.003, 0.9265 -2.106 0.003, 1.05 -2.13 0.003, 1.174 -2.145 0.003, 1.3 -2.15 0.003, 1.426 -2.145 0.003, 1.55 -2.13 0.003, 1.674 -2.106 0.003, 1.794 -2.072 0.003, 1.912 -2.028 0.003, 2.026 -1.976 0.003, 2.136 -1.914 0.003, 2.24 -1.844 0.003, 2.339 -1.767 0.003, 2.431 -1.681 0.003, 2.517 -1.589 0.003, 2.594 -1.49 0.003, 2.664 -1.386 0.003, 2.726 -1.276 0.003, 2.778 -1.162 0.003, 2.822 -1.044 0.003, 2.856 -0.9235 0.003, 2.88 -0.8003 0.003, 2.895 -0.6755 0.003, 2.9 -0.55 0.003 ] } coordIndex [ 0 1 2 -1 0 2 3 -1 0 3 4 -1 0 4 5 -1 0 5 6 -1 0 6 7 -1 0 7 8 -1 0 8 9 -1 0 9 10 -1 0 10 11 -1 0 11 12 -1 0 12 13 -1 0 13 14 -1 0 14 15 -1 0 15 16 -1 0 16 17 -1 0 17 18 -1 0 18 19 -1 0 19 20 -1 0 20 21 -1 0 21 22 -1 0 22 23 -1 0 23 24 -1 0 24 25 -1 0 25 26 -1 0 26 27 -1 0 27 28 -1 0 28 29 -1 0 29 30 -1 0 30 31 -1 0 31 32 -1 0 32 33 -1 0 33 34 -1 0 34 35 -1 0 35 36 -1 0 36 37 -1 0 37 38 -1 0 38 39 -1 0 39 40 -1 0 40 41 -1 ] solid FALSE } }
+  Shape { appearance PBRAppearance { baseColor 0.9 0.1 0.05 roughness 0.9 metalness 0 transparency 0.5 } geometry IndexedFaceSet { coord Coordinate { point [ 1.3 -0.55 0.004, 0.4 -0.55 0.004, 0.4028 -0.6206 0.004, 0.4111 -0.6908 0.004, 0.4249 -0.7601 0.004, 0.444 -0.8281 0.004, 0.4685 -0.8944 0.004, 0.4981 -0.9586 0.004, 0.5326 -1.02 0.004, 0.5719 -1.079 0.004, 0.6156 -1.135 0.004, 0.6636 -1.186 0.004, 0.7155 -1.234 0.004, 0.771 -1.278 0.004, 0.8298 -1.317 0.004, 0.8914 -1.352 0.004, 0.9556 -1.381 0.004, 1.022 -1.406 0.004, 1.09 -1.425 0.004, 1.159 -1.439 0.004, 1.229 -1.447 0.004, 1.3 -1.45 0.004, 1.371 -1.447 0.004, 1.441 -1.439 0.004, 1.51 -1.425 0.004, 1.578 -1.406 0.004, 1.644 -1.381 0.004, 1.709 -1.352 0.004, 1.77 -1.317 0.004, 1.829 -1.278 0.004, 1.885 -1.234 0.004, 1.936 -1.186 0.004, 1.984 -1.135 0.004, 2.028 -1.079 0.004, 2.067 -1.02 0.004, 2.102 -0.9586 0.004, 2.131 -0.8944 0.004, 2.156 -0.8281 0.004, 2.175 -0.7601 0.004, 2.189 -0.6908 0.004, 2.197 -0.6206 0.004, 2.2 -0.55 0.004 ] } coordIndex [ 0 1 2 -1 0 2 3 -1 0 3 4 -1 0 4 5 -1 0 5 6 -1 0 6 7 -1 0 7 8 -1 0 8 9 -1 0 9 10 -1 0 10 11 -1 0 11 12 -1 0 12 13 -1 0 13 14 -1 0 14 15 -1 0 15 16 -1 0 16 17 -1 0 17 18 -1 0 18 19 -1 0 19 20 -1 0 20 21 -1 0 21 22 -1 0 22 23 -1 0 23 24 -1 0 24 25 -1 0 25 26 -1 0 26 27 -1 0 27 28 -1 0 28 29 -1 0 29 30 -1 0 30 31 -1 0 31 32 -1 0 32 33 -1 0 33 34 -1 0 34 35 -1 0 35 36 -1 0 36 37 -1 0 37 38 -1 0 38 39 -1 0 39 40 -1 0 40 41 -1 ] solid FALSE } }
+] } ] boundingObject Plane { size 14 12 } locked TRUE }
+Solid { name "work table" children [ Group { children [
+  Pose { translation 0.475 0.2 0.74 children [ Shape { appearance PBRAppearance { baseColor 0.35 0.37 0.4 roughness 0.4 metalness 0.5 } geometry Box { size 1.25 1 0.02 } } ] }
+  Pose { translation -0.11 -0.26 0.38 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.06 0.06 0.7 } } ] }
+  Pose { translation -0.11 -0.26 0.015 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.035 height 0.03 subdivision 24 } } ] }
+  Pose { translation -0.11 0.66 0.38 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.06 0.06 0.7 } } ] }
+  Pose { translation -0.11 0.66 0.015 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.035 height 0.03 subdivision 24 } } ] }
+  Pose { translation 1.06 -0.26 0.38 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.06 0.06 0.7 } } ] }
+  Pose { translation 1.06 -0.26 0.015 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.035 height 0.03 subdivision 24 } } ] }
+  Pose { translation 1.06 0.66 0.38 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.06 0.06 0.7 } } ] }
+  Pose { translation 1.06 0.66 0.015 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.035 height 0.03 subdivision 24 } } ] }
+  Pose { translation 0.475 -0.26 0.15 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 1.17 0.045 0.045 } } ] }
+  Pose { translation 0.475 0.66 0.15 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 1.17 0.045 0.045 } } ] }
+  Pose { translation -0.11 0.2 0.15 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.045 0.92 0.045 } } ] }
+  Pose { translation 1.06 0.2 0.15 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.045 0.92 0.045 } } ] }
+  Pose { translation 0.475 -0.26 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 1.17 0.045 0.045 } } ] }
+  Pose { translation 0.475 0.66 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 1.17 0.045 0.045 } } ] }
+  Pose { translation -0.11 0.2 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.045 0.92 0.045 } } ] }
+  Pose { translation 1.06 0.2 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.045 0.92 0.045 } } ] }
+  Pose { translation 0 0.32 0.775 children [ Shape { appearance PBRAppearance { baseColor 0.55 0.57 0.6 roughness 0.6 metalness 0 } geometry Box { size 0.3 0.26 0.05 } } ] }
+  Pose { translation 0.85 -0.05 0.756 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Cylinder { radius 0.11 height 0.012 subdivision 24 } } ] }
+  Pose { translation 0.192 -0.1 0.756 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.01 0.2 0.012 } } ] }
+  Pose { translation 0.448 -0.1 0.756 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.01 0.2 0.012 } } ] }
+  Pose { translation 0.418 0.44 0.96 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.016 0.016 0.42 } } ] }
+  Pose { translation 0.418 0.56 0.96 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.016 0.016 0.42 } } ] }
+  Pose { translation 0.682 0.44 0.96 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.016 0.016 0.42 } } ] }
+  Pose { translation 0.682 0.56 0.96 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.016 0.016 0.42 } } ] }
+] } ] }
+Solid { name "infeed conveyor" children [ Group { children [
+  Pose { translation -0.9 -0.16 0.755 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Box { size 1.4 0.12 0.01 } } ] }
+  Pose { translation -0.9 -0.23 0.73 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 1.44 0.02 0.07 } } ] }
+  Pose { translation -0.85 -0.19 0.785 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.87 0.9 roughness 0.25 metalness 0.9 } geometry Box { size 1.3 0.004 0.02 } } ] }
+  Pose { translation -1.45 -0.21 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -1.15 -0.21 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.85 -0.21 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.55 -0.21 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.25 -0.21 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.9 -0.09 0.73 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 1.44 0.02 0.07 } } ] }
+  Pose { translation -0.85 -0.13 0.785 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.87 0.9 roughness 0.25 metalness 0.9 } geometry Box { size 1.3 0.004 0.02 } } ] }
+  Pose { translation -1.45 -0.11 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -1.15 -0.11 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.85 -0.11 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.55 -0.11 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -0.25 -0.11 0.79 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.01 0.04 0.006 } } ] }
+  Pose { translation -1.6 -0.16 0.73 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Cylinder { radius 0.03 height 0.12 subdivision 24 } } ] }
+  Pose { translation -0.2 -0.16 0.73 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Cylinder { radius 0.03 height 0.12 subdivision 24 } } ] }
+  Pose { translation -1.5 -0.21 0.36 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.04 0.04 0.68 } } ] }
+  Pose { translation -1.5 -0.21 0.01 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.03 height 0.02 subdivision 24 } } ] }
+  Pose { translation -1.5 -0.11 0.36 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.04 0.04 0.68 } } ] }
+  Pose { translation -1.5 -0.11 0.01 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.03 height 0.02 subdivision 24 } } ] }
+  Pose { translation -0.3 -0.21 0.36 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.04 0.04 0.68 } } ] }
+  Pose { translation -0.3 -0.21 0.01 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.03 height 0.02 subdivision 24 } } ] }
+  Pose { translation -0.3 -0.11 0.36 children [ Shape { appearance PBRAppearance { baseColor 0.78 0.8 0.82 roughness 0.35 metalness 0.8 } geometry Box { size 0.04 0.04 0.68 } } ] }
+  Pose { translation -0.3 -0.11 0.01 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.03 height 0.02 subdivision 24 } } ] }
+  Pose { translation -0.217 -0.16 0.785 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.012 0.1 0.05 } } ] }
+  Pose { translation -1.55 -0.3 0.71 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.2 0.35 0.6 roughness 0.4 metalness 0.4 } geometry Cylinder { radius 0.05 height 0.14 subdivision 24 } } ] }
+  Pose { translation -1.55 -0.34 0.71 children [ Shape { appearance PBRAppearance { baseColor 0.2 0.35 0.6 roughness 0.4 metalness 0.4 } geometry Box { size 0.1 0.1 0.1 } } ] }
+  Pose { translation -0.245 -0.265 0.78 children [ Shape { appearance PBRAppearance { baseColor 0.95 0.5 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.02 0.03 0.04 } } ] }
+  Pose { translation -0.245 -0.09 0.78 children [ Shape { appearance PBRAppearance { baseColor 0.8 0.1 0.1 roughness 0.3 metalness 0 } geometry Box { size 0.02 0.006 0.03 } } ] }
+  Pose { translation -0.453 -0.265 0.78 children [ Shape { appearance PBRAppearance { baseColor 0.95 0.5 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.02 0.03 0.04 } } ] }
+  Pose { translation -0.453 -0.09 0.78 children [ Shape { appearance PBRAppearance { baseColor 0.8 0.1 0.1 roughness 0.3 metalness 0 } geometry Box { size 0.02 0.006 0.03 } } ] }
+  Pose { translation -1.9 -0.16 0.65 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.86 0.88 roughness 0.5 metalness 0 } geometry Box { size 0.5 0.6 1.3 } } ] }
+  Pose { translation -1.9 -0.47 1 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.8 0.95 roughness 0.1 metalness 0 transparency 0.5 } geometry Box { size 0.3 0.02 0.4 } } ] }
+  Pose { translation -1.9 -0.16 1.32 children [ Shape { appearance PBRAppearance { baseColor 0.2 0.35 0.6 roughness 0.4 metalness 0.4 } geometry Box { size 0.5 0.6 0.04 } } ] }
+] } ] }
+Solid { name "safety fence" children [ Group { children [
+  Pose { translation -1.05 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.05 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 0.2 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 0.2 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 0.3 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 0.3 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 1.3 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 1.3 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 1.45 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 1.45 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -0.425 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 1.2 0.01 1.9 } } ] }
+  Pose { translation -0.425 -0.55 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 1.2 0.03 0.03 } } ] }
+  Pose { translation 0.25 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.05 0.01 1.9 } } ] }
+  Pose { translation 0.25 -0.55 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.03 0.03 } } ] }
+  Pose { translation 1.375 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.1 0.01 1.9 } } ] }
+  Pose { translation 1.375 -0.55 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.1 0.03 0.03 } } ] }
+  Pose { translation -1.425 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.425 1.1 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -0.675 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -0.675 1.1 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 0.2 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 0.2 1.1 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 1.45 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 1.45 1.1 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -0.2375 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.825 0.01 1.9 } } ] }
+  Pose { translation -0.2375 1.1 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.825 0.03 0.03 } } ] }
+  Pose { translation 0.825 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 1.2 0.01 1.9 } } ] }
+  Pose { translation 0.825 1.1 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 1.2 0.03 0.03 } } ] }
+  Pose { translation 1.45 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 1.45 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 1.45 0.275 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 1.45 0.275 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 1.45 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation 1.45 1.1 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation 1.45 -0.1375 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.01 0.775 1.9 } } ] }
+  Pose { translation 1.45 -0.1375 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.03 0.775 0.03 } } ] }
+  Pose { translation 1.45 0.6875 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.01 0.775 1.9 } } ] }
+  Pose { translation 1.45 0.6875 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.03 0.775 0.03 } } ] }
+  Pose { translation -1.05 -0.55 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.05 -0.55 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -1.05 -0.28 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.05 -0.28 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -1.05 -0.04 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.05 -0.04 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -1.05 0.275 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.05 0.275 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -1.05 1.1 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.05 0.05 2.1 } } ] }
+  Pose { translation -1.05 1.1 0.004 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.12 0.008 } } ] }
+  Pose { translation -1.05 -0.415 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.01 0.22 1.9 } } ] }
+  Pose { translation -1.05 -0.415 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.03 0.22 0.03 } } ] }
+  Pose { translation -1.05 0.1175 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.01 0.265 1.9 } } ] }
+  Pose { translation -1.05 0.1175 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.03 0.265 0.03 } } ] }
+  Pose { translation -1.05 0.6875 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.01 0.775 1.9 } } ] }
+  Pose { translation -1.05 0.6875 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.03 0.775 0.03 } } ] }
+  Pose { translation -1.35 -0.28 0.88 children [ Shape { appearance PBRAppearance { baseColor 0.75 0.85 0.95 roughness 0.1 metalness 0 transparency 0.6 } geometry Box { size 0.6 0.006 0.25 } } ] }
+  Pose { translation -1.35 -0.04 0.88 children [ Shape { appearance PBRAppearance { baseColor 0.75 0.85 0.95 roughness 0.1 metalness 0 transparency 0.6 } geometry Box { size 0.6 0.006 0.25 } } ] }
+  Pose { translation -1.35 -0.16 1.005 children [ Shape { appearance PBRAppearance { baseColor 0.75 0.85 0.95 roughness 0.1 metalness 0 transparency 0.6 } geometry Box { size 0.6 0.246 0.006 } } ] }
+  Pose { translation -1.05 -0.16 1.555 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.01 0.24 1.09 } } ] }
+  Pose { translation -0.635 1.07 1.1 children [ Shape { appearance PBRAppearance { baseColor 0.9 0.85 0.1 roughness 0.4 metalness 0 } geometry Box { size 0.04 0.03 0.08 } } ] }
+] } ] }
+DEF DOOR Pose { translation -1.425 1.1 0 children [ Group { children [
+  Pose { translation 0.375 0 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.16 0.17 roughness 0.6 metalness 0.3 transparency 0.55 } geometry Box { size 0.71 0.01 1.9 } } ] }
+  Pose { translation 0.375 0 2.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.71 0.03 0.03 } } ] }
+  Pose { translation 0.715 0 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.03 0.03 1.9 } } ] }
+  Pose { translation 0.67 0.03 1.05 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Box { size 0.02 0.06 0.15 } } ] }
+] } ] }
+Solid { name "scanner and console" children [ Group { children [
+  Pose { translation 1.3 -0.61 0.2 children [ Shape { appearance PBRAppearance { baseColor 0.95 0.8 0.1 roughness 0.5 metalness 0 } geometry Box { size 0.12 0.1 0.12 } } ] }
+  Pose { translation 1.3 -0.61 0.285 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 metalness 0 } geometry Cylinder { radius 0.04 height 0.05 subdivision 24 } } ] }
+  Pose { translation 1.3 -0.61 0.07 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.04 0.04 0.14 } } ] }
+  Pose { translation 1.85 0.55 0.5 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.86 0.88 roughness 0.5 metalness 0 } geometry Box { size 0.35 0.3 1 } } ] }
+  Pose { translation 1.85 0.55 1.02 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.35 0.3 0.04 } } ] }
+  Pose { translation 1.68 0.55 0.82 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.1 0.15 roughness 0.2 metalness 0 emissiveColor 0.05 0.2 0.35 } geometry Box { size 0.02 0.26 0.18 } } ] }
+  Pose { translation 1.67 0.47 0.62 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.9 0.85 0.1 roughness 0.5 metalness 0 } geometry Cylinder { radius 0.03 height 0.03 subdivision 24 } } ] }
+  Pose { translation 1.65 0.47 0.62 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.05 0.05 roughness 0.4 metalness 0 } geometry Cylinder { radius 0.022 height 0.04 subdivision 24 } } ] }
+  Pose { translation 1.67 0.61 0.62 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.6 0.95 roughness 0.4 metalness 0 } geometry Cylinder { radius 0.015 height 0.02 subdivision 24 } } ] }
+  Pose { translation 1.85 0.85 1 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.03 0.03 2 } } ] }
+] } ] }
+Pose { children [ Pose { translation 1.85 0.85 2.25 children [ Shape { appearance DEF LAMP_RED PBRAppearance { baseColor 0.9 0.1 0.08 roughness 0.3 transparency 0.15 emissiveColor 0 0 0 } geometry Cylinder { radius 0.04 height 0.08 } } ] }, Pose { translation 1.85 0.85 2.165 children [ Shape { appearance DEF LAMP_AMBER PBRAppearance { baseColor 1 0.6 0.05 roughness 0.3 transparency 0.15 emissiveColor 0 0 0 } geometry Cylinder { radius 0.04 height 0.08 } } ] }, Pose { translation 1.85 0.85 2.08 children [ Shape { appearance DEF LAMP_GREEN PBRAppearance { baseColor 0.1 0.85 0.2 roughness 0.3 transparency 0.15 emissiveColor 0 0 0 } geometry Cylinder { radius 0.04 height 0.08 } } ] }, Pose { translation 1.85 0.85 2.02 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Cylinder { radius 0.04 height 0.04 subdivision 24 } } ] } ] }
+Solid { name "cart dock" children [ Group { children [
+  Pose { translation 0.85 -0.32 0.015 children [ Shape { appearance PBRAppearance { baseColor 0.98 0.76 0.05 roughness 0.5 metalness 0 } geometry Box { size 0.7 0.03 0.03 } } ] }
+] } ] }
+DEF CART Solid { translation 0.85 -0.6 0 name "outfeed cart" children [ Group { children [
+  Pose { translation 0 0 0.435 children [ Shape { appearance PBRAppearance { baseColor 0.25 0.27 0.3 roughness 0.5 metalness 0.5 } geometry Box { size 0.66 0.5 0.03 } } ] }
+  Pose { translation 0 0 0.2 children [ Shape { appearance PBRAppearance { baseColor 0.25 0.27 0.3 roughness 0.5 metalness 0.5 } geometry Box { size 0.66 0.5 0.02 } } ] }
+  Pose { translation -0.31 -0.23 0.265 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.03 0.03 0.31 } } ] }
+  Pose { translation -0.27 -0.19 0.05 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.05 height 0.035 subdivision 24 } } ] }
+  Pose { translation -0.27 -0.19 0.1 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.05 0.06 0.04 } } ] }
+  Pose { translation -0.31 0.23 0.265 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.03 0.03 0.31 } } ] }
+  Pose { translation -0.27 0.19 0.05 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.05 height 0.035 subdivision 24 } } ] }
+  Pose { translation -0.27 0.19 0.1 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.05 0.06 0.04 } } ] }
+  Pose { translation 0.31 -0.23 0.265 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.03 0.03 0.31 } } ] }
+  Pose { translation 0.27 -0.19 0.05 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.05 height 0.035 subdivision 24 } } ] }
+  Pose { translation 0.27 -0.19 0.1 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.05 0.06 0.04 } } ] }
+  Pose { translation 0.31 0.23 0.265 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.03 0.03 0.31 } } ] }
+  Pose { translation 0.27 0.19 0.05 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Cylinder { radius 0.05 height 0.035 subdivision 24 } } ] }
+  Pose { translation 0.27 0.19 0.1 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.05 0.06 0.04 } } ] }
+  Pose { translation 0 -0.28 0.95 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.56 0.03 0.03 } } ] }
+  Pose { translation -0.28 -0.28 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.025 0.025 0.5 } } ] }
+  Pose { translation 0.28 -0.28 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.025 0.025 0.5 } } ] }
+] } ] boundingObject Pose { translation 0 0 0.3 children [ Box { size 0.66 0.5 0.2 } ] } }
+ScaraT6Cell { translation 0 0.32 0.8 rotation 0 0 1 -1.5708 name "Epson SCARA T6" controller "scara_robot" supervisor TRUE handSlot [ Receiver { name "scara_rx" channel 1 } Emitter { name "scara_tx" channel 2 } Pose { children [ Pose { translation 0 0 -0.015 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Cylinder { radius 0.012 height 0.03 subdivision 24 } } ] }, Pose { translation 0 0 -0.03 children [ Shape { appearance PBRAppearance { baseColor 0.15 0.15 0.15 roughness 0.4 metalness 0 } geometry Box { size 0.03 0.03 0.012 } } ] }, Pose { translation 0 0 -0.044 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.3 0.85 roughness 0.6 metalness 0 } geometry Cylinder { radius 0.016 height 0.016 subdivision 24 } } ] }, Pose { translation 0 0 -0.058 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.3 0.85 roughness 0.6 metalness 0 } geometry Cylinder { radius 0.019 height 0.004 subdivision 24 } } ] }, Pose { translation 0.025 0 -0.01 rotation 0 1 0 0.3 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.5 0.9 roughness 0.5 metalness 0 transparency 0.3 } geometry Cylinder { radius 0.004 height 0.06 subdivision 24 } } ] } ] } DEF SCARA_TCP Pose { translation 0 0 -0.06 } ] }
+UR5e { translation 0.85 -0.05 0.75 rotation 0 0 1 3.14159 name "UR5e" controller "ur_robot" supervisor TRUE selfCollision FALSE toolSlot [ Receiver { name "ur_rx" channel 3 } Emitter { name "ur_tx" channel 4 } Pose { translation 0 0.006 0 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Cylinder { radius 0.0315 height 0.012 subdivision 24 } } ] }, Pose { translation 0 0.027 0 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Cylinder { radius 0.04 height 0.03 subdivision 24 } } ] }, Pose { translation 0 0.062 0 children [ Shape { appearance PBRAppearance { baseColor 0.2 0.22 0.25 roughness 0.4 metalness 0.6 } geometry Box { size 0.32 0.04 0.06 } } ] }, Pose { translation 0 0.088 0 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.3 0.012 0.03 } } ] }, Pose { translation 0 0.06 0.05 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.4 0.8 roughness 0.4 metalness 0 } geometry Box { size 0.05 0.03 0.04 } } ] }, SliderJoint { jointParameters JointParameters { axis 1 0 0 } device [ LinearMotor { name "finger_l_motor" minPosition 0 maxPosition 0.02 maxVelocity 0.1 maxForce 80 } ] endPoint Solid { translation -0.135 0.12 0 children [ Pose { translation 0 0 0 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.008 0.09 0.05 } } ] }, Pose { translation 0.005 0.012 0 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Box { size 0.004 0.06 0.044 } } ] }, Pose { translation -0.01 -0.045 0 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.03 0.02 0.05 } } ] } ] name "finger l" } }, SliderJoint { jointParameters JointParameters { axis -1 0 0 } device [ LinearMotor { name "finger_r_motor" minPosition 0 maxPosition 0.02 maxVelocity 0.1 maxForce 80 } ] endPoint Solid { translation 0.135 0.12 0 children [ Pose { translation 0 0 0 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.7 metalness 0.2 } geometry Box { size 0.008 0.09 0.05 } } ] }, Pose { translation -0.005 0.012 0 children [ Shape { appearance PBRAppearance { baseColor 0.08 0.08 0.09 roughness 0.9 metalness 0 } geometry Box { size 0.004 0.06 0.044 } } ] }, Pose { translation 0.01 -0.045 0 children [ Shape { appearance PBRAppearance { baseColor 0.6 0.62 0.64 roughness 0.3 metalness 0.9 } geometry Box { size 0.03 0.02 0.05 } } ] } ] name "finger r" } }, DEF UR_TCP Pose { translation 0 0.165 0 } ] }
+DEF TRAY_0 Solid { translation 0.55 0.5 0.75 name "tray 0" children [ DEF TRAY_GEOM Group { children [
+  Pose { translation 0 0 0.003 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.32 0.65 roughness 0.55 metalness 0 } geometry Box { size 0.24 0.16 0.006 } } ] }
+  Pose { translation -0.118 0 0.025 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.32 0.65 roughness 0.55 metalness 0 } geometry Box { size 0.004 0.16 0.05 } } ] }
+  Pose { translation 0 -0.078 0.025 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.32 0.65 roughness 0.55 metalness 0 } geometry Box { size 0.24 0.004 0.05 } } ] }
+  Pose { translation 0.118 0 0.025 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.32 0.65 roughness 0.55 metalness 0 } geometry Box { size 0.004 0.16 0.05 } } ] }
+  Pose { translation 0 0.078 0.025 children [ Shape { appearance PBRAppearance { baseColor 0.1 0.32 0.65 roughness 0.55 metalness 0 } geometry Box { size 0.24 0.004 0.05 } } ] }
+  Pose { translation -0.075 -0.04 0.007 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.15 0.35 roughness 0.7 metalness 0 } geometry Cylinder { radius 0.025 height 0.002 subdivision 16 } } ] }
+  Pose { translation 0 -0.04 0.007 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.15 0.35 roughness 0.7 metalness 0 } geometry Cylinder { radius 0.025 height 0.002 subdivision 16 } } ] }
+  Pose { translation 0.075 -0.04 0.007 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.15 0.35 roughness 0.7 metalness 0 } geometry Cylinder { radius 0.025 height 0.002 subdivision 16 } } ] }
+  Pose { translation -0.075 0.04 0.007 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.15 0.35 roughness 0.7 metalness 0 } geometry Cylinder { radius 0.025 height 0.002 subdivision 16 } } ] }
+  Pose { translation 0 0.04 0.007 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.15 0.35 roughness 0.7 metalness 0 } geometry Cylinder { radius 0.025 height 0.002 subdivision 16 } } ] }
+  Pose { translation 0.075 0.04 0.007 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.15 0.35 roughness 0.7 metalness 0 } geometry Cylinder { radius 0.025 height 0.002 subdivision 16 } } ] }
+] } ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_1 Solid { translation 0.55 0.5 0.8 name "tray 1" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_2 Solid { translation 0.55 0.5 0.85 name "tray 2" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_3 Solid { translation 0.55 0.5 0.9 name "tray 3" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_4 Solid { translation 0.55 0.5 0.95 name "tray 4" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_5 Solid { translation 0.55 0.5 1 name "tray 5" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_6 Solid { translation 0.55 0.5 1.05 name "tray 6" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_7 Solid { translation 0.55 0.5 1.1 name "tray 7" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF TRAY_8 Solid { translation 0.32 -0.1 0.75 name "tray 8" children [ USE TRAY_GEOM ] boundingObject Pose { translation 0 0 0.025 children [ Box { size 0.24 0.16 0.05 } ] } }
+DEF PART_0 Solid { translation -3 -4 -0.5 name "part 0" children [ DEF PART_GEOM Group { children [
+  Pose { translation 0 0 0 children [ Shape { appearance PBRAppearance { baseColor 0.85 0.66 0.32 roughness 0.28 metalness 1 } geometry Cylinder { radius 0.022 height 0.035 subdivision 20 } } ] }
+  Pose { translation 0 0 0.0185 children [ Shape { appearance PBRAppearance { baseColor 0.12 0.12 0.12 roughness 0.5 metalness 0 } geometry Cylinder { radius 0.0121 height 0.002 subdivision 16 } } ] }
+] } ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_1 Solid { translation -2.94 -4 -0.5 name "part 1" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_2 Solid { translation -2.88 -4 -0.5 name "part 2" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_3 Solid { translation -2.82 -4 -0.5 name "part 3" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_4 Solid { translation -2.76 -4 -0.5 name "part 4" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_5 Solid { translation -2.7 -4 -0.5 name "part 5" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_6 Solid { translation -2.64 -4 -0.5 name "part 6" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_7 Solid { translation -2.58 -4 -0.5 name "part 7" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_8 Solid { translation -2.52 -4 -0.5 name "part 8" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_9 Solid { translation -2.46 -4 -0.5 name "part 9" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_10 Solid { translation -2.4 -4 -0.5 name "part 10" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_11 Solid { translation -2.34 -4 -0.5 name "part 11" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_12 Solid { translation -2.28 -4 -0.5 name "part 12" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_13 Solid { translation -2.22 -4 -0.5 name "part 13" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_14 Solid { translation -2.16 -4 -0.5 name "part 14" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_15 Solid { translation -2.1 -4 -0.5 name "part 15" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_16 Solid { translation -3 -4.06 -0.5 name "part 16" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_17 Solid { translation -2.94 -4.06 -0.5 name "part 17" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_18 Solid { translation -2.88 -4.06 -0.5 name "part 18" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_19 Solid { translation -2.82 -4.06 -0.5 name "part 19" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_20 Solid { translation -2.76 -4.06 -0.5 name "part 20" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_21 Solid { translation -2.7 -4.06 -0.5 name "part 21" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_22 Solid { translation -2.64 -4.06 -0.5 name "part 22" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_23 Solid { translation -2.58 -4.06 -0.5 name "part 23" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_24 Solid { translation -2.52 -4.06 -0.5 name "part 24" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_25 Solid { translation -2.46 -4.06 -0.5 name "part 25" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_26 Solid { translation -2.4 -4.06 -0.5 name "part 26" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_27 Solid { translation -2.34 -4.06 -0.5 name "part 27" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_28 Solid { translation -2.28 -4.06 -0.5 name "part 28" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_29 Solid { translation -2.22 -4.06 -0.5 name "part 29" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_30 Solid { translation -2.16 -4.06 -0.5 name "part 30" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_31 Solid { translation -2.1 -4.06 -0.5 name "part 31" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_32 Solid { translation -3 -4.12 -0.5 name "part 32" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_33 Solid { translation -2.94 -4.12 -0.5 name "part 33" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_34 Solid { translation -2.88 -4.12 -0.5 name "part 34" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_35 Solid { translation -2.82 -4.12 -0.5 name "part 35" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_36 Solid { translation -2.76 -4.12 -0.5 name "part 36" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_37 Solid { translation -2.7 -4.12 -0.5 name "part 37" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_38 Solid { translation -2.64 -4.12 -0.5 name "part 38" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_39 Solid { translation -2.58 -4.12 -0.5 name "part 39" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_40 Solid { translation -2.52 -4.12 -0.5 name "part 40" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_41 Solid { translation -2.46 -4.12 -0.5 name "part 41" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_42 Solid { translation -2.4 -4.12 -0.5 name "part 42" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_43 Solid { translation -2.34 -4.12 -0.5 name "part 43" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_44 Solid { translation -2.28 -4.12 -0.5 name "part 44" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_45 Solid { translation -2.22 -4.12 -0.5 name "part 45" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_46 Solid { translation -2.16 -4.12 -0.5 name "part 46" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_47 Solid { translation -2.1 -4.12 -0.5 name "part 47" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_48 Solid { translation -3 -4.18 -0.5 name "part 48" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_49 Solid { translation -2.94 -4.18 -0.5 name "part 49" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_50 Solid { translation -2.88 -4.18 -0.5 name "part 50" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_51 Solid { translation -2.82 -4.18 -0.5 name "part 51" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_52 Solid { translation -2.76 -4.18 -0.5 name "part 52" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_53 Solid { translation -2.7 -4.18 -0.5 name "part 53" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_54 Solid { translation -2.64 -4.18 -0.5 name "part 54" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_55 Solid { translation -2.58 -4.18 -0.5 name "part 55" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_56 Solid { translation -2.52 -4.18 -0.5 name "part 56" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_57 Solid { translation -2.46 -4.18 -0.5 name "part 57" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_58 Solid { translation -2.4 -4.18 -0.5 name "part 58" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_59 Solid { translation -2.34 -4.18 -0.5 name "part 59" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_60 Solid { translation -2.28 -4.18 -0.5 name "part 60" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_61 Solid { translation -2.22 -4.18 -0.5 name "part 61" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_62 Solid { translation -2.16 -4.18 -0.5 name "part 62" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+DEF PART_63 Solid { translation -2.1 -4.18 -0.5 name "part 63" children [ USE PART_GEOM ] boundingObject Cylinder { radius 0.022 height 0.035 } }
+Robot { name "cell PLC" controller "cell_plc" supervisor TRUE children [ DistanceSensor { translation -0.245 -0.25 0.78 rotation 0 0 1 1.5708 name "B1" lookupTable [ 0 0 0, 0.5 0.5 0 ] numberOfRays 1 }, DistanceSensor { translation -0.453 -0.25 0.78 rotation 0 0 1 1.5708 name "B5" lookupTable [ 0 0 0, 0.5 0.5 0 ] numberOfRays 1 }, DistanceSensor { translation 0.32 -0.3 0.775 rotation 0 0 1 1.5708 name "B2" lookupTable [ 0 0 0, 0.5 0.5 0 ] numberOfRays 1 }, DistanceSensor { translation 1.3 -0.6 0.3 rotation 0 0 1 3.14159 name "B7" lookupTable [ 0 0 0, 0.5 0.5 0 ] numberOfRays 1 }, Emitter { name "to_scara" channel 1 }, Receiver { name "from_scara" channel 2 }, Emitter { name "to_ur" channel 3 }, Receiver { name "from_ur" channel 4 }, Emitter { name "to_operator" channel 5 } ] }
+DEF OPERATOR Pedestrian { translation 2.3 0.2 1.27 rotation 0 0 1 3.14159 name "operator" controller "operator" controllerArgs [ "--cell" ] shirtColor 0.95 0.45 0.05 pantsColor 0.15 0.18 0.25 bodySlot [ Receiver { name "op_rx" channel 5 } ] }
